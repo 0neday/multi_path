@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82B8E5BE20C86D1A000B741D /* jelbrek.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B8E5BA20C86D19000B741D /* jelbrek.m */; };
+		82B8E5BF20C86D1A000B741D /* offsetof.c in Sources */ = {isa = PBXBuildFile; fileRef = 82B8E5BB20C86D19000B741D /* offsetof.c */; };
+		82B8E5C020C86D1A000B741D /* patchfinder64.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B8E5BC20C86D19000B741D /* patchfinder64.m */; };
+		82B8E5C120C86D1A000B741D /* kern_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B8E5BD20C86D19000B741D /* kern_utils.m */; };
+		82B8E5C320C87039000B741D /* libjb.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B8E5C220C87039000B741D /* libjb.m */; };
 		B00730BC20C723AE005995FA /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = B00730BB20C723AE005995FA /* offsets.m */; };
 		B00730C020C730BC005995FA /* README in Resources */ = {isa = PBXBuildFile; fileRef = B00730BF20C730BC005995FA /* README */; };
 		B030E1F620BC0864000CDD4C /* sploit.c in Sources */ = {isa = PBXBuildFile; fileRef = B030E1F520BC0864000CDD4C /* sploit.c */; };
@@ -19,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82B8E5B820C86CF0000B741D /* jelbrek */ = {isa = PBXFileReference; lastKnownFileType = folder; path = jelbrek; sourceTree = "<group>"; };
+		82B8E5BA20C86D19000B741D /* jelbrek.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = jelbrek.m; path = multi_path/jelbrek/jelbrek.m; sourceTree = "<group>"; };
+		82B8E5BB20C86D19000B741D /* offsetof.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = offsetof.c; path = multi_path/jelbrek/offsetof.c; sourceTree = "<group>"; };
+		82B8E5BC20C86D19000B741D /* patchfinder64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = patchfinder64.m; path = multi_path/jelbrek/patchfinder64.m; sourceTree = "<group>"; };
+		82B8E5BD20C86D19000B741D /* kern_utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = kern_utils.m; path = multi_path/jelbrek/kern_utils.m; sourceTree = "<group>"; };
+		82B8E5C220C87039000B741D /* libjb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = libjb.m; path = multi_path/jelbrek/libjb.m; sourceTree = "<group>"; };
 		B00730BB20C723AE005995FA /* offsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = offsets.m; sourceTree = "<group>"; };
 		B00730BD20C7273C005995FA /* offsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = offsets.h; sourceTree = "<group>"; };
 		B00730BE20C72BCB005995FA /* kmem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kmem.h; sourceTree = "<group>"; };
@@ -52,6 +63,11 @@
 		B060B7D120BC0624001FD0CE = {
 			isa = PBXGroup;
 			children = (
+				82B8E5C220C87039000B741D /* libjb.m */,
+				82B8E5BA20C86D19000B741D /* jelbrek.m */,
+				82B8E5BD20C86D19000B741D /* kern_utils.m */,
+				82B8E5BB20C86D19000B741D /* offsetof.c */,
+				82B8E5BC20C86D19000B741D /* patchfinder64.m */,
 				B060B7DC20BC0624001FD0CE /* multi_path */,
 				B060B7DB20BC0624001FD0CE /* Products */,
 			);
@@ -68,6 +84,7 @@
 		B060B7DC20BC0624001FD0CE /* multi_path */ = {
 			isa = PBXGroup;
 			children = (
+				82B8E5B820C86CF0000B741D /* jelbrek */,
 				B060B7F320BC063F001FD0CE /* multi_path.entitlements */,
 				B060B7DD20BC0624001FD0CE /* AppDelegate.h */,
 				B060B7DE20BC0624001FD0CE /* AppDelegate.m */,
@@ -167,8 +184,13 @@
 			files = (
 				B030E1F620BC0864000CDD4C /* sploit.c in Sources */,
 				B060B7E220BC0624001FD0CE /* ViewController.m in Sources */,
+				82B8E5C320C87039000B741D /* libjb.m in Sources */,
 				B060B7ED20BC0624001FD0CE /* main.m in Sources */,
 				B00730BC20C723AE005995FA /* offsets.m in Sources */,
+				82B8E5BE20C86D1A000B741D /* jelbrek.m in Sources */,
+				82B8E5BF20C86D1A000B741D /* offsetof.c in Sources */,
+				82B8E5C020C86D1A000B741D /* patchfinder64.m in Sources */,
+				82B8E5C120C86D1A000B741D /* kern_utils.m in Sources */,
 				B060B7DF20BC0624001FD0CE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,11 +327,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = multi_path/multi_path.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 854G7LGZ42;
+				DEVELOPMENT_TEAM = 9F3ED5X4UJ;
 				INFOPLIST_FILE = multi_path/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.multi-path";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeashacks.multi-path";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,11 +343,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = multi_path/multi_path.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 854G7LGZ42;
+				DEVELOPMENT_TEAM = 9F3ED5X4UJ;
 				INFOPLIST_FILE = multi_path/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.multi-path";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeashacks.multi-path";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

