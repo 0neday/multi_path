@@ -1,4 +1,4 @@
-multi_path - exploit for p0 issue 1558 (CVE-2018-4241)
+### multi_path - exploit for p0 issue 1558 (CVE-2018-4241)
 @i41nbeer
 
 mptcp_usr_connectx is the handler for the connectx syscall for the AP_MULTIPATH socket family.
@@ -6,6 +6,7 @@ mptcp_usr_connectx is the handler for the connectx syscall for the AP_MULTIPATH 
 The logic of this function fails to correctly handle source and destination sockaddrs which aren't
 AF_INET or AF_INET6:
 
+```
 //***************
   // verify sa_len for AF_INET:
 
@@ -43,6 +44,7 @@ AF_INET or AF_INET6:
   }
 
 //***************
+```
 
 Looking around in the structure which you overflow inside you notice you can hit both fields here:
 
@@ -111,7 +113,7 @@ API:
 #include "sploit.h" and call go() to run the exploit.
 If it worked you can use the functions in kmem.h to read and write kernel memory
 
-Notes:
+***Notes***:
 Multiple people have publically bindiff'ed this bug from the patch (or their 0day got patched ;) read their stuff for more details:
   @elvanderb gave a lightning talk about the bug at rump.beer in Paris on May 31st: https://www.rump.beer/2018/slides/ios_48h.pdf
   @jaakerblom published a working exploit on github on June 1st: https://github.com/potmdehex/multipath_kfree
