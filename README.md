@@ -7,7 +7,6 @@ The logic of this function fails to correctly handle source and destination sock
 AF_INET or AF_INET6:
 
 ```
-//***************
   // verify sa_len for AF_INET:
 
   if (dst->sa_family == AF_INET &&
@@ -43,7 +42,6 @@ AF_INET or AF_INET6:
     memcpy(&mpte->mpte_dst, dst, dst->sa_len);
   }
 
-//***************
 ```
 
 Looking around in the structure which you overflow inside you notice you can hit both fields here:
